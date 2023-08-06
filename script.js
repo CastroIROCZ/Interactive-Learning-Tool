@@ -32,7 +32,46 @@ const questions = {
         correctAnswer: "5 students" 
       }
     ],
-    Science: [ /* questions go here */ ],
+    Science: [
+      {
+        question: "What is the process by which plants make their own food using sunlight?",
+        options: ["Photosynthesis", "Germination", "Respiration", "Fertilization"],
+        correctAnswer: "Photosynthesis"
+      },
+      {
+        question: "What state of matter has a definite shape and volume?",
+        options: ["Liquid", "Solid", "Gas", "Plasma"],
+        correctAnswer: "Solid"
+      },
+      {
+        question: "Which planet is known as the 'Red Planet'?",
+        options: ["Mars", "Venus", "Jupiter", "Saturn"],
+        correctAnswer: "Mars"
+      },
+      {
+        question: "What is the name of the natural outer layer that surrounds the Earth?",
+        options: ["Atmosphere", "Mantle", "Crust", "Core"],
+        correctAnswer: "Atmosphere"
+      },
+      {
+        question: "Which of these animals is a cold-blooded vertebrate?",
+        options: ["Whale", "Eagle", "Turtle", "Rabbit"],
+        correctAnswer: "Turtle"
+      },
+      {
+        question: "What is the process of changing water into water vapor?",
+        options: ["Evaporation", "Condensation", "Melting", "Freezing"],
+        correctAnswer: "Evaporation"
+      }
+    ],
+    History: [
+      {
+        question: "Who was the first President of the United States?",
+        options: ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John F. Kennedy"],
+        correctAnswer: "George Washington"
+      },
+    ],
+    English: [ ]
     // ... other subjects
   },
   "4th": {
@@ -47,8 +86,10 @@ const questions = {
   }
 };
 
-let currentSubject = null;
-let currentQuestionIndex = 0;
+//let currentSubject = null;
+//let currentQuestionIndex = 0;
+let currentGrade = null;
+let correctAnswerCount = 0;
 
 function displayQuestion(question) {
   const questionElement = document.getElementById('question');
@@ -69,21 +110,21 @@ function displayQuestion(question) {
 
 function checkAnswer(selectedAnswer) {
   const feedbackElement = document.getElementById('feedback');
-  const currentQuestion = questions[currentSubject][currentQuestionIndex];
+  const currentQuestion = questions[currentGrade][currentSubject][currentQuestionIndex];
   const correctAnswer = currentQuestion.correctAnswer;
 
   if (selectedAnswer === correctAnswer) {
+    correctAnswerCount++;
     feedbackElement.textContent = "Good job!";
+    if (correctAnswerCount === 5) {
+      feedbackElement.textContent = "This section has been passed! Please choose another section or you may start again.";
+      correctAnswerCount = 0;
+      return;
+    }
+    currentQuestionIndex++;
+    displayQuestion(questions[currentGrade][currentSubject][currentQuestionIndex]);
   } else {
     feedbackElement.textContent = "Wrong answer. Try again!";
-  }
-
-  currentQuestionIndex++;
-  if (currentQuestionIndex >= 6) {
-    currentQuestionIndex = 0;
-    feedbackElement.textContent = '';
-  } else {
-    setTimeout(() => displayQuestion(questions[currentSubject][currentQuestionIndex]), 1500);
   }
 }
 
@@ -92,9 +133,10 @@ function initialize() {
 
   subjectBoxes.forEach(box => {
     box.addEventListener('click', () => {
-      currentSubject = box.textContent;
+      currentGrade = box.getAttribute('data-grade');
+      currentSubject = box.getAttribute('data-subject');
       currentQuestionIndex = 0;
-      displayQuestion(questions[currentSubject][currentQuestionIndex]);
+      displayQuestion(questions[currentGrade][currentSubject][currentQuestionIndex]);
     });
   });
 }
