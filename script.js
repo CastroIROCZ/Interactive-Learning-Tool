@@ -1,56 +1,50 @@
 const questions = {
-  Math: [
-    {
-      question: "What is 25 + 17?",
-      options: ["30", "42", "56", "42"],
-      correctAnswer: "42"
-    },
-    {
-      question: "What is 8 × 7?",
-      options: ["15", "48", "56", "56"],
-      correctAnswer: "56"
-    },
-    // Add 4 more math questions here...
-  ],
-  Science: [
-    {
-      question: "What is the largest planet in our solar system?",
-      options: ["Mars", "Jupiter", "Venus", "Jupiter"],
-      correctAnswer: "Jupiter"
-    },
-    {
-      question: "What is the process by which plants make their own food?",
-      options: ["Photosynthesis", "Germination", "Respiration", "Photosynthesis"],
-      correctAnswer: "Photosynthesis"
-    },
-    // Add 4 more science questions here...
-  ],
-  History: [
-    {
-      question: "Who was the first president of the United States?",
-      options: ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "George Washington"],
-      correctAnswer: "George Washington"
-    },
-    {
-      question: "What war was fought between the North and South regions of the United States?",
-      options: ["Revolutionary War", "World War II", "Civil War", "Civil War"],
-      correctAnswer: "Civil War"
-    },
-    // Add 4 more history questions here...
-  ],
-  English: [
-    {
-      question: "What is the plural form of 'child'?",
-      options: ["childs", "child's", "children", "children"],
-      correctAnswer: "children"
-    },
-    {
-      question: "Which word is a verb: 'jump', 'ball', 'blue'?",
-      options: ["jump", "ball", "blue", "jump"],
-      correctAnswer: "jump"
-    },
-    // Add 4 more English questions here...
-  ]
+  "3rd": {
+    Math: [
+      {
+        question: "What is the sum of 58 and 23?",
+        options: ["69", "81", "76", "51"],
+        correctAnswer: "81"
+      },
+      {
+        question: " If you have 8 apples and give 3 to your friend, how many apples do you have left?",
+        options: ["5", "10", "3", "6"],
+        correctAnswer: "5"
+      },
+      {
+        question: "Sarah has 24 stickers, and Emma has 19 stickers. How many more stickers does Sarah have than Emma?",
+        options: ["5", "45", "43", "3"],
+        correctAnswer: "5"
+      },
+      {
+        question: "A box contains 36 marbles. If 15 of them are blue and the rest are red, how many red marbles are there?",
+        options: ["18", "21", "12", "27"],
+        correctAnswer: "21"
+      },
+      {
+        question: "If a rectangle has a length of 12 units and a width of 5 units, what is its perimeter?",
+        options: ["60 units", "30 units", "24 units", "22 units"],
+        correctAnswer: "24 units"
+      },
+      {
+        question: "There are 30 students in a class, and they want to split into 6 equal groups for a project. How many students will be in each group?",
+        options: ["4 students", "5 students", "6 students", "7 students"],
+        correctAnswer: "5 students" 
+      }
+    ],
+    Science: [ /* questions go here */ ],
+    // ... other subjects
+  },
+  "4th": {
+    Math: [ /* questions you provided go here */ ],
+    Science: [ /* and so on... */ ],
+    // ... other subjects
+  },
+  "5th": {
+    Math: [ /* questions go here */ ],
+    Science: [ /* questions go here */ ],
+    // ... other subjects
+  }
 };
 
 let currentSubject = null;
