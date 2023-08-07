@@ -70,19 +70,76 @@ const questions = {
         options: ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John F. Kennedy"],
         correctAnswer: "George Washington"
       },
+      {
+        question: "What event led to the founding of the United States?",
+        options: ["Boston Tea Party", "Declaration of Independence", "Invention of the Internet", "Construction of the Great Wall of China"],
+        correctAnswer: "Declaration of Independence"
+      },
+      {
+        question: "Which famous American explorer is known for his journey to the Pacific Ocean?",
+        options: ["Christopher Columbus", "Lewis and Clark", "Marco Polo", "Ferdinand Magellan"],
+        correctAnswer: "Lewis and Clark"
+      },
+      {
+        question: "What did the Pilgrims celebrate with the Native Americans in 1621?",
+        options: ["Halloween", "Thanksgiving", "Independence Day", "Christmas"],
+        correctAnswer: "Thanksgiving"
+      },
+      {
+        question: "Who wrote the Declaration of Independence?",
+        options: ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "Benjamin Franklin"],
+        correctAnswer: "Thomas Jefferson"
+      },
+      {
+        question: "What famous speech did Martin Luther King Jr. deliver in 1963?",
+        options: ["I Have a Dream", "We Shall Overcome", "Give Me Liberty or Give Me Death", "Tear down this wall!"],
+        correctAnswer: "I Have a Dream"
+      }
     ],
-    English: [ ]
-    // ... other subjects
+    English: [
+      {
+        question: "Which word is the antonym of 'happy'?",
+        options: ["Sad", "Brave", "Funny", "Tall"],
+        correctAnswer: "Sad"
+      },
+      {
+        question: "Choose the correct spelling: 'frind', 'freind', 'friend', or 'frend'?",
+        options: ["frind", "freind", "friend", "frend"],
+        correctAnswer: "friend"
+      },
+      {
+        question: "What is the plural form of the word 'dog'?",
+        options: ["dogs", "doggies", "dogies", "doggy"],
+        correctAnswer: "dogs"
+      },
+      {
+        question: "Which word means the opposite of 'night'?",
+        options: ["light", "dark", "moon", "sleep"],
+        correctAnswer: "light"
+      },
+      {
+        question: "Identify the correct sentence: 'She plays the piano.' or 'She play the piano.'?",
+        options: ["She plays the piano.", "She play the piano."],
+        correctAnswer: "She plays the piano."
+      },
+      {
+        question: "What is the meaning of the word 'beneath'?",
+        options: ["above", "under", "behind", "around"],
+        correctAnswer: "under"
+      }
+    ]
   },
   "4th": {
     Math: [ /* questions you provided go here */ ],
     Science: [ /* and so on... */ ],
-    // ... other subjects
+    History: [ ],
+    English: [ ]
   },
   "5th": {
     Math: [ /* questions go here */ ],
     Science: [ /* questions go here */ ],
-    // ... other subjects
+    History: [ ],
+    English: [ ]
   }
 };
 
