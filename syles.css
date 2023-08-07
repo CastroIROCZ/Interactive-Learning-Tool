@@ -7,6 +7,10 @@ h1 {
   margin: 20px 0;
 }
 
+.grade-section {
+  margin-bottom: 20px;
+}
+
 .choices {
   display: flex;
   justify-content: space-around;
@@ -27,8 +31,19 @@ h1 {
   margin: 0 auto;
 }
 
-#question {
+.grade-section h1,
+.grade-section h2,
+.grade-section h3
+  margin-top: 40px;
   margin-bottom: 10px;
+}
+
+.grade-section .question-container {
+  margin-top: 10px;
+}
+
+.grade-section #feedback {
+  margin-top: 10px;
 }
 
 #answers {
