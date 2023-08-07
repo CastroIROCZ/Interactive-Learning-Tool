@@ -258,8 +258,7 @@ const questions = {
         correctAnswer: "'"
       }
     ]
-  }
-}
+  },
   "3rd": {
     Math: [
       {
