@@ -33,16 +33,16 @@ h1 {
 
 .grade-section h1,
 .grade-section h2,
-.grade-section h3
-  margin-top: 40px;
+.grade-section h3 {
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .grade-section .question-container {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.grade-section #feedback {
+.grade-section p[id^="feedback-"] {
   margin-top: 10px;
 }
 
