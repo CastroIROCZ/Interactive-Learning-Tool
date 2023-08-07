@@ -395,26 +395,28 @@ const questions = {
 let currentGrade = null;
 let correctAnswerCount = 0;
 
-function displayQuestion(question) {
-  const questionElement = document.getElementById('question');
-  const answersElement = document.getElementById('answers');
-  const feedbackElement = document.getElementById('feedback');
+function displayQuestion(question, subject, questionIndex) {
+  const questionElement = document.getElementById('question-${grade}');
+  const answersElement = document.getElementById('answers-${grade}');
+  const feedbackElement = document.getElementById('feedback-${grade}');
 
-  questionElement.textContent = question.question;
+  const currentQuestion = questions[grade][subject][questionIndex];
+
+  questionElement.textContent = currentQuestion.question;
   answersElement.innerHTML = '';
   question.options.forEach(option => {
     const button = document.createElement('button');
     button.textContent = option;
-    button.onclick = () => checkAnswer(option);
+    button.onclick = () => checkAnswer(grade, subject, questionIndex, option);
     answersElement.appendChild(button);
   });
 
   feedbackElement.textContent = '';
 }
 
-function checkAnswer(selectedAnswer) {
-  const feedbackElement = document.getElementById('feedback');
-  const currentQuestion = questions[currentGrade][currentSubject][currentQuestionIndex];
+function checkAnswer(grade, subject, questionIndex, selectedAnswer) {
+  const feedbackElement = document.getElementById(`feedback-${grade}`);
+  const currentQuestion = questions[grade][subject][questionIndex];
   const correctAnswer = currentQuestion.correctAnswer;
 
   if (selectedAnswer === correctAnswer) {
@@ -425,8 +427,8 @@ function checkAnswer(selectedAnswer) {
       correctAnswerCount = 0;
       return;
     }
-    currentQuestionIndex++;
-    displayQuestion(questions[currentGrade][currentSubject][currentQuestionIndex]);
+    questionIndex++;
+    displayQuestion(grade, subject, questionIndex);
   } else {
     feedbackElement.textContent = "Wrong answer. Try again!";
   }
@@ -440,7 +442,7 @@ function initialize() {
       currentGrade = box.getAttribute('data-grade');
       currentSubject = box.getAttribute('data-subject');
       currentQuestionIndex = 0;
-      displayQuestion(questions[currentGrade][currentSubject][currentQuestionIndex]);
+      displayQuestion(grade, subject, 0);
     });
   });
 }
