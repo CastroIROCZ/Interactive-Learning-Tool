@@ -1,4 +1,265 @@
-const questions = {
+const questions = {   
+  "1st": {
+    Math: [
+      {
+        question: "What is 5 + 3?",
+        options: ["6", "8", "7", "9"],
+        correctAnswer: "8"
+      },
+      {
+        question: "What is 4 - 2?",
+        options: ["1", "3", "2", "0"],
+        correctAnswer: "2"
+      },
+      {
+        question: "Which number comes after 6?",
+        options: ["5", "7", "6", "8"],
+        correctAnswer: "7"
+      },
+      {
+        question: "How many fingers are on one hand?",
+        options: ["4", "5", "6", "10"],
+        correctAnswer: "5"
+      },
+      {
+        question: "Which number is the smallest?",
+        options: ["1", "5", "3", "7"],
+        correctAnswer: "1"
+      },
+      {
+        question: "What is 3 + 2?",
+        options: ["4", "6", "5", "7"],
+        correctAnswer: "5"
+      }
+    ],
+    Science: [
+      {
+        question: "What does a plant need to grow?",
+        options: ["Candy", "Sunlight", "Shoes", "Books"],
+        correctAnswer: "Sunlight"
+      },
+      {
+        question: "What do you use to see at night?",
+        options: ["Flashlight", "Spoon", "Plate", "Shoe"],
+        correctAnswer: "Flashlight"
+      },
+      {
+        question: "Which animal says 'meow'?",
+        options: ["Dog", "Cat", "Cow", "Sheep"],
+        correctAnswer: "Cat"
+      },
+      {
+        question: "Where do fish live?",
+        options: ["Sky", "Land", "Water", "Tree"],
+        correctAnswer: "Water"
+      },
+      {
+        question: "What covers the Earth?",
+        options: ["Shoes", "Air", "Clouds", "Water"],
+        correctAnswer: "Water"
+      },
+      {
+        question: "Which is not a plant?",
+        options: ["Rose", "Tulip", "Fish", "Oak"],
+        correctAnswer: "Fish"
+      }
+    ],
+    History: [
+      {
+        question: "Who delivers presents on Christmas?",
+        options: ["Easter Bunny", "Tooth Fairy", "Santa Claus", "Turkey"],
+        correctAnswer: "Santa Claus"
+      },
+      {
+        question: "Which holiday involves hunting for eggs?",
+        options: ["Christmas", "Halloween", "Easter", "Valentine's Day"],
+        correctAnswer: "Easter"
+      },
+      {
+        question: "Who is known for chopping down a cherry tree?",
+        options: ["Abraham Lincoln", "George Washington", "Martin Luther King Jr.", "Albert Einstein"],
+        correctAnswer: "George Washington"
+      },
+      {
+        question: "Where did the Pilgrims land in America?",
+        options: ["Plymouth Rock", "Golden Gate Bridge", "Statue of Liberty", "Mount Rushmore"],
+        correctAnswer: "Plymouth Rock"
+      },
+      {
+        question: "What day is Independence Day in the USA?",
+        options: ["July 4th", "December 25th", "January 1st", "October 31st"],
+        correctAnswer: "July 4th"
+      },
+      {
+        question: "On Thanksgiving, what large bird is often eaten?",
+        options: ["Pigeon", "Crow", "Turkey", "Ostrich"],
+        correctAnswer: "Turkey"
+      }
+    ],
+    English: [
+      {
+        question: "Which is a vowel?",
+        options: ["G", "M", "O", "T"],
+        correctAnswer: "O"
+      },
+      {
+        question: "Which word rhymes with 'hat'?",
+        options: ["Dog", "Mat", "Pen", "Sun"],
+        correctAnswer: "Mat"
+      },
+      {
+        question: "Which word is a noun?",
+        options: ["Run", "Joyful", "After", "House"],
+        correctAnswer: "House"
+      },
+      {
+        question: "Which sentence is correct?",
+        options: ["Cat barked.", "Dogs flies.", "Birds sing.", "Fish barks."],
+        correctAnswer: "Birds sing."
+      },
+      {
+        question: "Which word means the opposite of 'hot'?",
+        options: ["Cold", "Warm", "Heat", "Scorching"],
+        correctAnswer: "Cold"
+      },
+      {
+        question: "What punctuation ends a question?",
+        options: [".", "!", "?", ","],
+        correctAnswer: "?"
+      }
+    ]
+  },
+  "2nd": {
+    Math: [
+      {
+        question: "What is 6 x 2?",
+        options: ["8", "12", "10", "14"],
+        correctAnswer: "12"
+      },
+      {
+        question: "What is 8 divided by 2?",
+        options: ["2", "4", "6", "8"],
+        correctAnswer: "4"
+      },
+      {
+        question: "What is 7 - 3?",
+        options: ["2", "5", "4", "10"],
+        correctAnswer: "4"
+      },
+      {
+        question: "Which number is even?",
+        options: ["3", "7", "8", "9"],
+        correctAnswer: "8"
+      },
+      {
+        question: "If you have 3 apples and buy 2 more, how many apples do you have?",
+        options: ["4", "5", "6", "7"],
+        correctAnswer: "5"
+      },
+      {
+        question: "What shape has four equal sides?",
+        options: ["Triangle", "Circle", "Rectangle", "Square"],
+        correctAnswer: "Square"
+      }
+    ],
+    Science: [
+      {
+        question: "Which is the largest animal?",
+        options: ["Elephant", "Lion", "Giraffe", "Whale"],
+        correctAnswer: "Whale"
+      },
+      {
+        question: "Which planet is closest to the sun?",
+        options: ["Venus", "Earth", "Mars", "Mercury"],
+        correctAnswer: "Mercury"
+      },
+      {
+        question: "What do plants breathe out that humans and animals breathe in?",
+        options: ["Carbon Dioxide", "Oxygen", "Nitrogen", "Helium"],
+        correctAnswer: "Oxygen"
+      },
+      {
+        question: "What type of rock is formed by lava from a volcano?",
+        options: ["Sedimentary", "Igneous", "Metamorphic", "Crystal"],
+        correctAnswer: "Igneous"
+      },
+      {
+        question: "Which of the following is NOT a sense?",
+        options: ["Hearing", "Seeing", "Tasting", "Flying"],
+        correctAnswer: "Flying"
+      },
+      {
+        question: "What force pulls objects toward the center of the Earth?",
+        options: ["Friction", "Magnetism", "Gravity", "Push"],
+        correctAnswer: "Gravity"
+      }
+    ],
+    History: [
+      {
+        question: "On which holiday do you wear costumes and go trick-or-treating?",
+        options: ["Christmas", "Halloween", "Easter", "Valentine's Day"],
+        correctAnswer: "Halloween"
+      },
+      {
+        question: "Which explorer is credited with discovering America?",
+        options: ["Christopher Columbus", "Marco Polo", "Vasco da Gama", "Ferdinand Magellan"],
+        correctAnswer: "Christopher Columbus"
+      },
+      {
+        question: "Who wrote the Declaration of Independence?",
+        options: ["Benjamin Franklin", "Abraham Lincoln", "Thomas Jefferson", "George Washington"],
+        correctAnswer: "Thomas Jefferson"
+      },
+      {
+        question: "Which ancient civilization built pyramids?",
+        options: ["Greeks", "Egyptians", "Romans", "Mongols"],
+        correctAnswer: "Egyptians"
+      },
+      {
+        question: "Where did the Olympic Games originate?",
+        options: ["Rome", "London", "Greece", "China"],
+        correctAnswer: "Greece"
+      },
+      {
+        question: "What ancient civilization used hieroglyphs?",
+        options: ["Mayan", "Greek", "Egyptian", "Chinese"],
+        correctAnswer: "Egyptian"
+      }
+    ],
+    English: [
+      {
+        question: "Which word rhymes with 'cat'?",
+        options: ["Dog", "Car", "Bat", "Tree"],
+        correctAnswer: "Bat"
+      },
+      {
+        question: "Which is NOT a vowel?",
+        options: ["A", "E", "L", "U"],
+        correctAnswer: "L"
+      },
+      {
+        question: "What do you call a word that shows action?",
+        options: ["Noun", "Adjective", "Verb", "Pronoun"],
+        correctAnswer: "Verb"
+      },
+      {
+        question: "Which is the plural of 'mouse'?",
+        options: ["Mice", "Mouses", "Mouse's", "Mousey"],
+        correctAnswer: "Mice"
+      },
+      {
+        question: "Which sentence is correct?",
+        options: ["She don't like apples.", "She doesn't likes apples.", "She doesn't like apples.", "She no like apples."],
+        correctAnswer: "She doesn't like apples."
+      },
+      {
+        question: "What punctuation is used to show possession?",
+        options: ["-", ":", ";", "'"],
+        correctAnswer: "'"
+      }
+    ]
+  }
+}
   "3rd": {
     Math: [
       {
