@@ -3,7 +3,7 @@ body {
   text-align: center;
 }
 
-h1 {
+h1, h2 {
   margin: 20px 0;
 }
 
@@ -27,17 +27,19 @@ h1 {
   margin: 0 auto;
 }
 
-#question {
+/* Updated the selectors below from IDs to classes */
+
+.question-title-1st, .question-title-2nd, .question-title-3rd, .question-title-4th, .question-title-5th {
   margin-bottom: 10px;
 }
 
-#answers {
+.answers {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#answers button {
+.answers button {
   margin: 5px;
   padding: 8px 15px;
   cursor: pointer;
@@ -46,6 +48,6 @@ h1 {
   border-radius: 5px;
 }
 
-#answers button:hover {
+.answers button:hover {
   background-color: #e0e0e0;
 }
