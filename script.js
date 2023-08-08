@@ -650,27 +650,15 @@ const questions = {
     ]
   }
 };
-let currentSubject = null;
-let currentQuestionIndex = 0;
+//let currentSubject = null;
+//let currentQuestionIndex = 0;
 let currentGrade = null;
 let correctAnswerCount = 0;
 
-function getElementsForCurrentGrade() {
-  return {
-    questionElement: document.querySelector(`.question-title-${currentGrade}`),
-    answersElement: document.querySelector(`.answers-${currentGrade}`),
-    feedbackElement: document.querySelector(`.feedback-${currentGrade}`)
-  };
-}
-
 function displayQuestion(question) {
-  const { questionElement, answersElement, feedbackElement } = getElementsForCurrentGrade();
-
-  if (!question) {
-    feedbackElement.textContent = "This section has been passed! Please choose another section or you may start again.";
-    correctAnswerCount = 0;
-    return;
-  }
+  const questionElement = document.getElementById('question');
+  const answersElement = document.getElementById('answers');
+  const feedbackElement = document.getElementById('feedback');
 
   questionElement.textContent = question.question;
   answersElement.innerHTML = '';
@@ -685,7 +673,7 @@ function displayQuestion(question) {
 }
 
 function checkAnswer(selectedAnswer) {
-  const { feedbackElement } = getElementsForCurrentGrade();
+  const feedbackElement = document.getElementById('feedback');
   const currentQuestion = questions[currentGrade][currentSubject][currentQuestionIndex];
   const correctAnswer = currentQuestion.correctAnswer;
 
@@ -712,7 +700,6 @@ function initialize() {
       currentGrade = box.getAttribute('data-grade');
       currentSubject = box.getAttribute('data-subject');
       currentQuestionIndex = 0;
-      correctAnswerCount = 0;
       displayQuestion(questions[currentGrade][currentSubject][currentQuestionIndex]);
     });
   });
